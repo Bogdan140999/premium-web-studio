@@ -1,26 +1,156 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f6f1e7;
+  --foreground: #2a2218;
+  --gold: #c9a35c;
+  --gold-light: #e7cf9a;
+  --gold-dark: #9c7a3c;
+  --surface: #fffdf8;
+  --surface-soft: #efe8d9;
+  --muted: #8a7d68;
+  --border: rgba(156, 122, 60, 0.28);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-muted: var(--muted);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  /* keep anchored sections clear of the fixed header */
+  scroll-padding-top: 6rem;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+/* Metallic gold text, like the silk in the artwork */
+.gold-gradient-text {
+  background: linear-gradient(
+    120deg,
+    #9c7a3c 0%,
+    #c9a35c 35%,
+    #e7cf9a 55%,
+    #c9a35c 75%,
+    #9c7a3c 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-border {
+  border: 1px solid var(--border);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #e7cf9a 0%, #c9a35c 50%, #ab853f 100%);
+  color: #2a2218;
+  box-shadow:
+    0 4px 14px rgba(201, 163, 92, 0.4),
+    0 1px 3px rgba(156, 122, 60, 0.3);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow:
+    0 8px 24px rgba(201, 163, 92, 0.5),
+    0 2px 6px rgba(156, 122, 60, 0.35);
+}
+
+.card-luxury {
+  background: var(--surface);
+  border: 1px solid rgba(156, 122, 60, 0.18);
+  box-shadow: 0 2px 12px rgba(42, 34, 24, 0.05);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.card-luxury:hover {
+  transform: translateY(-4px);
+  border-color: rgba(156, 122, 60, 0.4);
+  box-shadow:
+    0 12px 32px rgba(42, 34, 24, 0.08),
+    0 4px 12px rgba(201, 163, 92, 0.15);
+}
+
+/* --- Decorative elements inspired by the artwork --- */
+
+/* Flowing silk ribbon: soft blurred golden sweep */
+.silk-ribbon {
+  position: absolute;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(231, 207, 154, 0.55) 25%,
+    rgba(201, 163, 92, 0.65) 50%,
+    rgba(231, 207, 154, 0.45) 75%,
+    transparent 100%
+  );
+  filter: blur(28px);
+  border-radius: 50%;
+  transform: rotate(-12deg);
+}
+
+/* Thin gold outline circle */
+.gold-ring {
+  position: absolute;
+  pointer-events: none;
+  border: 1px solid rgba(156, 122, 60, 0.35);
+  border-radius: 50%;
+}
+
+/* Small metallic gold sphere */
+.gold-sphere {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 32% 28%,
+    #f3e3b8 0%,
+    #d9b76e 40%,
+    #a8853f 75%,
+    #7d6128 100%
+  );
+  box-shadow:
+    0 6px 16px rgba(156, 122, 60, 0.35),
+    inset -3px -4px 8px rgba(125, 97, 40, 0.4);
+}
+
+/* Thin diagonal gold line */
+.gold-line {
+  position: absolute;
+  pointer-events: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(156, 122, 60, 0.5) 50%,
+    transparent 100%
+  );
 }
