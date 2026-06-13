@@ -10,7 +10,7 @@ const display = Cormorant_Garamond({
 
 const body = DM_Sans({
   variable: "--font-body",
-  subsets: ["latin", "cyrillic"],
+  subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
 });
 
