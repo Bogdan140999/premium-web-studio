@@ -53,7 +53,13 @@ const advantages = [
   {
     number: "01",
     title: "Скорость запуска",
-    text: "От брифа до публикации — за 7–21 день. Без бюрократии и лишних согласований.",
+    text: "От идеи до запуска сайта — от 7 до 21 дня.",
+    features: [
+      "Персональный дизайн",
+      "Адаптация под телефон",
+      "Подключение Telegram",
+      "Публикация в интернете",
+    ],
   },
   {
     number: "02",
@@ -518,6 +524,19 @@ export default function Home() {
               <p className="text-muted text-sm leading-relaxed font-light">
                 {item.text}
               </p>
+              {"features" in item && item.features && (
+                <ul className="space-y-2.5 mt-5">
+                  {item.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-start gap-2.5 text-sm text-foreground/80"
+                    >
+                      <CheckIcon />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>
