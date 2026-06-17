@@ -49,27 +49,44 @@ const services = [
   },
 ];
 
+const stats = [
+  { value: "7–21 день", label: "средний срок запуска" },
+  { value: "100% адаптация", label: "все устройства" },
+  { value: "24 часа", label: "ответ на заявку" },
+  { value: "1 человек", label: "персональное сопровождение проекта" },
+];
+
 const advantages = [
   {
     number: "01",
-    title: "Скорость запуска",
-    text: "От идеи до запуска сайта — от 7 до 21 дня.",
+    title: "Быстрый запуск",
+    text: "От идеи до готового сайта за 7–21 день.",
     features: [
-      "Персональный дизайн",
-      "Адаптация под телефон",
-      "Подключение Telegram",
-      "Публикация в интернете",
+      "Индивидуальный дизайн",
+      "Адаптация под все устройства",
+      "Подключение Telegram и аналитики",
+      "Публикация сайта в интернете",
     ],
   },
   {
     number: "02",
-    title: "Технологии будущего",
-    text: "Next.js, TypeScript, оптимизация Core Web Vitals. Сайт быстрый, надёжный и масштабируемый.",
+    title: "Современные технологии",
+    features: [
+      "Next.js",
+      "TypeScript",
+      "Высокая скорость загрузки",
+      "SEO-оптимизация",
+    ],
   },
   {
     number: "03",
-    title: "Продажи в приоритете",
-    text: "Каждый экран проектируется под конверсию: чёткие CTA, доверие, понятная выгода для клиента.",
+    title: "Фокус на продажах",
+    features: [
+      "Продуманная структура",
+      "Сильные призывы к действию",
+      "Простая подача информации",
+      "Увеличение количества заявок",
+    ],
   },
 ];
 
@@ -280,6 +297,29 @@ export default function Home() {
               Бесплатная консультация
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="relative max-w-6xl mx-auto px-6 pb-16 md:pb-20">
+        <div className="gold-sphere w-4 h-4 top-4 right-8 hidden lg:block" />
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          {stats.map((item) => (
+            <article
+              key={item.value}
+              className="card-luxury relative rounded-sm p-6 md:p-8 text-center"
+            >
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
+
+              <p className="font-display text-2xl md:text-3xl font-semibold gold-gradient-text leading-tight mb-3">
+                {item.value}
+              </p>
+              <p className="text-muted text-xs md:text-sm tracking-[0.08em] uppercase font-light leading-relaxed">
+                {item.label}
+              </p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -521,10 +561,12 @@ export default function Home() {
               <h3 className="font-display text-2xl font-semibold mb-3">
                 {item.title}
               </h3>
-              <p className="text-muted text-sm leading-relaxed font-light">
-                {item.text}
-              </p>
-              {"features" in item && item.features && (
+              {item.text && (
+                <p className="text-muted text-sm leading-relaxed font-light">
+                  {item.text}
+                </p>
+              )}
+              {item.features && (
                 <ul className="space-y-2.5 mt-5">
                   {item.features.map((feature) => (
                     <li
