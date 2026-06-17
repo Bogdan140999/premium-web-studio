@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 
 const display = Cormorant_Garamond({
@@ -8,9 +8,9 @@ const display = Cormorant_Garamond({
   weight: ["400", "500", "600", "700"],
 });
 
-const body = DM_Sans({
+const body = Inter({
   variable: "--font-body",
-  subsets: ["latin"],
+  subsets: ["latin", "cyrillic"],
   weight: ["300", "400", "500", "600"],
 });
 

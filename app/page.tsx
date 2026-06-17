@@ -278,7 +278,7 @@ export default function Home() {
 
           <p className="text-muted text-lg md:text-xl max-w-xl leading-relaxed mb-9 font-light">
             Создаю премиальные веб-решения для бизнеса: лендинги, корпоративные
-            сайты и интернет-магазины. Дизайн уровня luxury-брендов — с
+            сайты и интернет-магазины. Дизайн уровня премиальных брендов — с
             измеримым результатом в заявках и продажах.
           </p>
 
@@ -343,17 +343,16 @@ export default function Home() {
             </p>
 
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-7">
-              Богдан <span className="gold-gradient-text italic">Кравчук</span>
+              Богдан Кравчук
             </h2>
 
-            <p className="text-foreground/85 text-lg md:text-xl leading-relaxed mb-5 font-light">
-              Создаю современные сайты на Next.js.
-            </p>
-
-            <p className="text-muted text-lg leading-relaxed mb-9 font-light">
-              Помогаю бизнесу получать больше заявок через продуманный дизайн и
-              быструю загрузку сайта.
-            </p>
+            <div className="font-body text-muted text-lg leading-relaxed font-light mb-9 space-y-4">
+              <p>Создаю современные сайты на Next.js.</p>
+              <p>
+                Помогаю бизнесу получать больше заявок через продуманный дизайн
+                и быструю загрузку сайта.
+              </p>
+            </div>
 
             <a
               href="#контакт"
