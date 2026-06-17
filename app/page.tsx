@@ -566,19 +566,19 @@ export default function Home() {
                   {item.text}
                 </p>
               )}
-              {item.features && (
-                <ul className="space-y-2.5 mt-5">
-                  {item.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className="flex items-start gap-2.5 text-sm text-foreground/80"
-                    >
-                      <CheckIcon />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
+              <ul
+                className={`space-y-2.5 ${item.text ? "mt-5" : "mt-4"}`}
+              >
+                {item.features.map((feature) => (
+                  <li
+                    key={feature}
+                    className="flex items-start gap-2.5 text-sm text-foreground/80"
+                  >
+                    <CheckIcon />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
