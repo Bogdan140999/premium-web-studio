@@ -533,7 +533,7 @@ export default function Home() {
         <div className="gold-sphere w-8 h-8 top-16 right-4 hidden lg:block" />
         <div className="gold-line w-72 top-10 left-[-6rem] rotate-[24deg] hidden lg:block" />
 
-        <div className="mb-16 max-w-3xl">
+        <div className="mb-16 max-w-3xl mx-auto text-center">
           <p className="text-gold-dark text-sm tracking-[0.3em] uppercase mb-4">
             Преимущества
           </p>
