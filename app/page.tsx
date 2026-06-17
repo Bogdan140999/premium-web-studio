@@ -60,8 +60,8 @@ const advantages = [
   {
     number: "01",
     title: "Быстрый запуск",
-    text: "От идеи до готового сайта за 7–21 день.",
     features: [
+      "От идеи до готового сайта за 7–21 день",
       "Индивидуальный дизайн",
       "Адаптация под все устройства",
       "Подключение Telegram и аналитики",
@@ -561,14 +561,7 @@ export default function Home() {
               <h3 className="font-display text-2xl font-semibold mb-3">
                 {item.title}
               </h3>
-              {item.text && (
-                <p className="text-muted text-sm leading-relaxed font-light">
-                  {item.text}
-                </p>
-              )}
-              <ul
-                className={`space-y-2.5 ${item.text ? "mt-5" : "mt-4"}`}
-              >
+              <ul className="space-y-2.5 mt-4">
                 {item.features.map((feature) => (
                   <li
                     key={feature}
