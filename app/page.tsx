@@ -533,17 +533,15 @@ export default function Home() {
         <div className="gold-sphere w-8 h-8 top-16 right-4 hidden lg:block" />
         <div className="gold-line w-72 top-10 left-[-6rem] rotate-[24deg] hidden lg:block" />
 
-        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start mb-16">
-          <div>
-            <p className="text-gold-dark text-sm tracking-[0.3em] uppercase mb-4">
-              Преимущества
-            </p>
-            <h2 className="font-display text-4xl md:text-5xl font-semibold leading-tight">
-              Почему клиенты{" "}
-              <span className="gold-gradient-text italic">возвращаются</span>
-            </h2>
-          </div>
-          <p className="text-muted text-lg font-light leading-relaxed pt-2">
+        <div className="mb-16 max-w-3xl">
+          <p className="text-gold-dark text-sm tracking-[0.3em] uppercase mb-4">
+            Преимущества
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl font-semibold leading-tight mb-6">
+            Почему клиенты{" "}
+            <span className="gold-gradient-text italic">возвращаются</span>
+          </h2>
+          <p className="text-muted text-lg font-light leading-relaxed">
             Работаю как партнёр, а не подрядчик: погружаюсь в ваш бизнес,
             предлагаю решения и довожу проект до результата, который можно
             измерить в деньгах.
