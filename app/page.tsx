@@ -299,6 +299,79 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About */}
+      <section
+        id="обо-мне"
+        className="relative max-w-6xl mx-auto px-6 py-20 md:py-28"
+      >
+        <div className="gold-sphere w-5 h-5 top-12 right-6 hidden lg:block" />
+        <div className="gold-line w-64 top-24 left-[-6rem] rotate-[-18deg] hidden lg:block" />
+
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
+          {/* Photo */}
+          <div className="relative mx-auto w-full max-w-md md:max-w-none">
+            <div className="gold-ring w-36 h-36 -bottom-10 -right-10 hidden lg:block opacity-60" />
+
+            <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-[0_16px_48px_rgba(42,34,24,0.12),0_6px_20px_rgba(201,163,92,0.18)]">
+              <Image
+                src="/bogdan.png"
+                alt="Богдан Кравчук"
+                fill
+                sizes="(max-width: 768px) 100vw, 28rem"
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Text */}
+          <div>
+            <p className="text-gold-dark text-sm tracking-[0.3em] uppercase mb-4">
+              Обо мне
+            </p>
+
+            <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-semibold leading-tight mb-7">
+              Помогаю бизнесу получать клиентов через современные сайты
+            </h2>
+
+            <div className="font-body text-muted text-lg leading-relaxed font-light mb-8 space-y-4">
+              <p>
+                Меня зовут Богдан. Я создаю современные сайты, которые помогают
+                бизнесу привлекать клиентов, повышать доверие и выделяться среди
+                конкурентов.
+              </p>
+              <p>
+                Работаю быстро, погружаюсь в задачи клиента и сопровождаю проект
+                от идеи до запуска.
+              </p>
+            </div>
+
+            <ul className="space-y-3 mb-10">
+              {[
+                "Индивидуальный подход",
+                "Быстрая реализация",
+                "Современные технологии",
+                "Поддержка после запуска",
+              ].map((feature) => (
+                <li
+                  key={feature}
+                  className="flex items-start gap-2.5 text-sm text-foreground/80"
+                >
+                  <CheckIcon />
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="#контакт"
+              className="btn-gold inline-flex items-center justify-center px-10 py-4 rounded-sm font-semibold tracking-wide"
+            >
+              Обсудить проект
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Stats */}
       <section className="relative max-w-6xl mx-auto px-6 pb-16 md:pb-20">
         <div className="gold-sphere w-4 h-4 top-4 right-8 hidden lg:block" />
@@ -319,67 +392,6 @@ export default function Home() {
               </p>
             </article>
           ))}
-        </div>
-      </section>
-
-      {/* Divider */}
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
-      </div>
-
-      {/* About */}
-      <section
-        id="обо-мне"
-        className="relative max-w-6xl mx-auto px-6 py-20 md:py-28"
-      >
-        <div className="gold-sphere w-5 h-5 top-20 left-2 hidden lg:block" />
-        <div className="gold-line w-80 bottom-16 left-[-8rem] rotate-[-20deg] hidden lg:block" />
-
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
-          {/* Text */}
-          <div>
-            <p className="text-gold-dark text-sm tracking-[0.3em] uppercase mb-4">
-              Обо мне
-            </p>
-
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-7">
-              Богдан Кравчук
-            </h2>
-
-            <div className="font-body text-muted text-lg leading-relaxed font-light mb-9 space-y-4">
-              <p>Создаю современные сайты на Next.js.</p>
-              <p>
-                Помогаю бизнесу получать больше заявок через продуманный дизайн
-                и быструю загрузку сайта.
-              </p>
-            </div>
-
-            <a
-              href="#контакт"
-              className="btn-gold inline-flex items-center justify-center px-10 py-4 rounded-sm font-semibold tracking-wide"
-            >
-              Связаться со мной
-            </a>
-          </div>
-
-          {/* Photo */}
-          <div className="relative mx-auto w-full max-w-md">
-            <div className="gold-ring w-40 h-40 -bottom-12 -left-14 hidden lg:block opacity-70" />
-            <div className="gold-sphere w-7 h-7 -top-3 -left-3 hidden md:block" />
-
-            {/* Passe-partout frame around the photo */}
-            <div className="card-luxury relative rounded-sm border !border-gold/50 p-3 md:p-4">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
-                <Image
-                  src="/bogdan.png"
-                  alt="Богдан Кравчук"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 28rem"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
