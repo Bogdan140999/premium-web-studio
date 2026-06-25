@@ -268,7 +268,7 @@ export default function Home() {
 
         <div className="relative max-w-6xl mx-auto px-6 pt-8 pb-20 md:pt-10 md:pb-28">
           <p className="text-gold-dark text-sm tracking-[0.3em] uppercase mb-5 font-medium">
-            Premium Web Studio
+            Bogdan Web Studio
           </p>
 
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] mb-6 max-w-3xl">
